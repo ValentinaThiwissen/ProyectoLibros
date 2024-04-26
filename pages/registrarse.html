@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrarse | BookFLIX - Catálogo de libros</title>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/estilos.css">
+
+    </head>
+    <body class="body">
+        <header class="footerYheader">
+            <nav>
+                <a href="../index.html">
+                    <img src="../assets/img/LOGO.png" alt="Logo de BookFLIX" loading="lazy" width="100">
+                </a>
+                <ul>
+
+                    <li>
+                        <a href="../index.html">Tendencias</a>                     
+                    </li>
+
+                    <li>
+                        <a href="../pages/catalogo.html">Catálogo</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Registrarse</a>                     
+                    </li>
+
+                    <li>
+                        <a href="../pages/inicioSesion.html">Iniciar Sesion</a>                     
+                    </li>
+                
+                </ul>
+
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1>Registrarse</h1>
+                <p>Ingrese sus datos</p>
+                <form class="formulario" method="post">
+                    <div>
+
+                        <input type="text" name="nombre" id ="nombre" placeholder="Nombre" required> 
+                    </div>
+                    <div>
+                        <input type="text" name="apellido" id ="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div>
+                        <input type="text" name="usuario" id ="usuario" placeholder="Nombre de usuario" required>
+                    </div>
+                    <div>
+                        <input type="email" name="mail" id="mail" placeholder="ejemplo@mail.com" required>
+                    </div>
+                    <div>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <div>
+                        <input type="date" name="nacimiento" id="nacimiento" required>
+                    </div>
+                    <div>
+                        <select name="pais" id="pais" required>
+                            <option value="0" selected>Argentina</option>
+                            <option value="1">Perú</option>
+                            <option value="2">México</option>
+                            <option value="3">Chile</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="termino">Acepta términos y condiciones</label>
+                        <input type="checkbox" name="termino" id="termino" required>
+                    </div>
+                    <div>
+                        <input type="submit" value="Suscribirse" id="suscribirse">
+                        <input type="reset" value="Limpiar campos" id="reset">  
+                    </div>                   
+                 </form>
+                 <p>¿Ya tenés un usuario creado?</p>
+                 <a href="./inicioSesion.html"> Iniciar sesion</a>
+            </section>
+
+        </main>
+        
+        <footer class="footerYheader">
+            <nav>
+                <ul>
+                    <li>Términos y condiciones</li>
+                    <li>Preguntas frecuentes</li>
+                    <li>Ayuda</li>
+                    <li>Administrador de Libros</li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
