@@ -7,12 +7,6 @@
     box-sizing: border-box;
 }
 
-.footerYheader{
-    background-color: #96AFB8;
-    display: flex;
-
-    }
-
 .body{
     background-color: #0f6174;
 }
@@ -58,36 +52,51 @@ h2{
         background-color:#000000;
     }
 }
-
-.contenedor{
-    display: flex;
-    padding-right: 20px;
-    height: 10vh ;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    list-style:none;
-  }
-
-.hijos{
-    color: white;
-    background-color: #0b3a45;
-    border: 1px solid #000000;
-    font-size: 2 rem;
-    text-align: center;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    margin-right: 15px;
-
-
-    a{
-        text-decoration: none;
-        color: antiquewhite;
-        text-align: center;
+.header{
+    background-color: #96AFB8;
+    nav{
+        /*.logo{
+            position: absolute;
+        }*/
+        ul{
+            display: flex;
+            padding-right: 20px;
+            height: 10vh ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style:none;
+            column-gap: 20px;
+            li{
+                a{
+                    color: rgb(0, 0, 0);
+                    font-size: 2 rem;
+                    text-align: center;
+                    text-decoration: none;
+                }
+            }
+        }
     }
 }
-
-
-
-   
+.footer{
+    background-color: #96AFB8;
+    nav{
+        ul{
+            display: flex;
+            padding-right: 20px;
+            height: 10vh ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style:none;
+            column-gap: 20px;
+            a{
+               color: rgb(0, 0, 0);
+               font-size: 2 rem;
+               text-align: center;
+               text-decoration: none;
+            }
+            
+            }
+        }
+    }
