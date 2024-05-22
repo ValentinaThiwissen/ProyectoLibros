@@ -2,25 +2,122 @@
  
 *{
     font-family:"Sedan", serif;
-    margin: O;
-    padding: O;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.body{
-    background-color: #0f6174;
+/*configuracion de variables*/
+:root{
+    --main-color: #f3f3f3;
+    --secondary-color: #0f6174;
+    --third-color: #96AFB8;
+    --third-color-t: #000000bc;
 }
 
+/*estilos del body*/
+body{
+    background-color: var(--secondary-color); /*Color fondo*/
+    color: var(--main-color); /*Color texto*/
+}
+
+/*generalidades*/
 h1{
     color:rgb(255, 255, 255);
-    font-size: 2rem; /*no menor a 16px*/
+    font-size: 4rem; /*no menor a 16px*/
     text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 h2{
     color:rgb(255, 255, 255);
-    font-size: 25px; /*no menor a 16px*/
+    font-size: 2.5rem; /*no menor a 16px*/
     text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px
+}
+
+/*media query 992px*/
+@media screen and (max-width: 992px){
+    h1{
+        font-size: 2.4rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+}
+
+header,footer{
+    background-color: #96AFB8;
+    color: var(--third-color-t);
+    font-weight: 700;
+    padding: 20px;
+}
+
+.header{
+    height: 15vh;
+    position:sticky;
+    top:0; 
+    z-index: 10; 
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color: var(--third-color-t);
+            font-size:1.2rem;
+        }
+        ul{
+            display: flex;
+            padding-right: 20px;
+            height: 10vh ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style:none;
+            column-gap: 20px;
+            li{
+                a{
+                    font-size: 2 rem;
+                }
+            }
+        }
+    }
+}
+.footer{
+    height: 10vh;
+    position:sticky; 
+    z-index: 10; 
+    nav{
+        height: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            text-decoration: none;
+            color: var(--third-color-t);
+            font-size:1.2rem;
+        }
+
+
+        ul{
+            display: flex;
+            padding-right: 20px;
+            height: 10vh ;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style:none;
+            column-gap: 20px;
+            a{
+               font-size: 2 rem;            
+            }
+        }
+    }
 }
 
 .detalle{
@@ -38,65 +135,97 @@ h2{
     text-align: center;
 }
 
-.sectionPrincipal{
-    background-image:url(../assets/img/posibleFondo1.jpeg);
+.sectionTitulos{
+    height: 60vh;
+    background:linear-gradient(to bottom, #000000a3, #000000a3), url(../assets/img/posibleFondo1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 60vh;
-    p{
-        color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenedorTitulos{
         text-align: center;
-        font-size: 1.5rem;
-        background-color:#000000;
+        width: 60%;
+        margin:0 auto;
+        border-radius: 5px;
+
+        a{
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color:var(--main-color);
+            font-size: 2rem;
+            border:2px solid var(--main-color);
+            border-radius: 5px;
+            padding:10px 20px;
+        }
     }
 }
-.header{
-    background-color: #96AFB8;
-    nav{
-        /*.logo{
-            position: absolute;
-        }*/
-        ul{
-            display: flex;
-            padding-right: 20px;
-            height: 10vh ;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            list-style:none;
-            column-gap: 20px;
-            li{
-                a{
-                    color: rgb(0, 0, 0);
-                    font-size: 2 rem;
-                    text-align: center;
-                    text-decoration: none;
-                }
+
+.librosTendencias{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaTendencias{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(255,255,255,0.42);
+            border-radius: 5px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+    button{
+       margin-bottom:20px;
+    }
+}
+
+.librosAclamados{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    h2{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .galeriaAclamadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        column-gap: 30px;
+        div{
+            width: 220px;
+            height: 350px;
+            flex-shrink: 0;
+            box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
+           
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
             }
         }
     }
 }
-.footer{
-    background-color: #96AFB8;
-    nav{
-        ul{
-            display: flex;
-            padding-right: 20px;
-            height: 10vh ;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            list-style:none;
-            column-gap: 20px;
-            a{
-               color: rgb(0, 0, 0);
-               font-size: 2 rem;
-               text-align: center;
-               text-decoration: none;
-            }
-            
-            }
-        }
-    }
+

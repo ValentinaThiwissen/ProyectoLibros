@@ -8,16 +8,19 @@
         <link rel="stylesheet" href="./css/estilos.css">
 
     </head>
-    <body class="body">
+    <body>
         <header class="header">
             <nav>
-                <a class="Logo" href="#">
-                    <img src="./assets/img/LOGO.png" alt="Logo de BookFLIX" loading="lazy" width="100">
-                </a>
                 <ul>
+                    <li>
+                        <a href="#">
+                          <img src="./assets/img/LOGO.png" alt="Logo de BookFLIX" loading="lazy" width="100">
+                        </a>  
+                    </li>
+                    
 
                     <li>
-                        <a href="#">Tendencias</a>                     
+                        <a href="#tendencias">Tendencias</a>                     
                     </li>
 
                     <li>
@@ -36,68 +39,102 @@
 
             </nav>
         </header>
-        <main>
-            <section class="sectionPrincipal">
-                <!--el h1 es el titulo principal de la pagina, puede solo tener 1 h1 excepto que tambien tengamos un h1 dentro de un article.-->
-                <h1>Libros a tu medida</h1>
-                <!--el p es una etiqueta que delimita un parrafo-->
-                <p>Aquí encontraras las mejores recomendaciones de libros</p>
+        <main id = "main">
+            <section class="sectionTitulos">
+                <div class="contenedorTitulos">
+                    <!--el h1 es el titulo principal de la pagina, puede solo tener 1 h1 excepto que tambien tengamos un h1 dentro de un article.-->
+                    <h1>Libros a tu medida</h1>
+                    <!--el p es una etiqueta que delimita un parrafo-->
+                    <h2>Aquí encontraras las mejores recomendaciones</h2>
+                    <a  href="./pages/registrarse.html">Registrate</a>
+                </div>
             </section>
+
             <section>
                  <h2>¿Qué estás buscando para leer?</h2>
                  <form class= formulario action="">
-                    <input type="">
+                    <input type="text" placeholder="Buscar..." id="buscar" name="buscar">
                     <input type="submit" value="Buscar">
                  </form>
             </section>
-               
-            <section>
+            
+            <hr>
+            <section id="tendencias" class="librosTendencias">
                 <h2>Las tendencias de hoy</h2>
-                    <a href="./pages/detalle.html">
+                <div class="galeriaTendencias">
+                    <div>
+                        <a href="./pages/detalle.html">
                                 <img src="assets/img/100AniosDeSoledad.jpg" alt="Portada de 100 años de soledad" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>  
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                                 <img src="assets/img/elPrincipito.jpg" alt="Portada de el principito" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/laCasaDeLosEspiritus.jpg" alt="Portada de la casa de los espíritus" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/comoAguaParaChocolate.jpg" alt="Portada de como agua para chocolate" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/harryPotterYLaPiedraFilosofal.jpg" alt="Portada de Harry Potter y la piedra filosofal" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                    </a>
-                    <a href="./pages/detalle.html">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
                         <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                    </a>
-                    <button>Anterior</button>
-                    <button>Siguiente</button>
+                        </a>
+                    </div> 
+                </div>
+                <button>Anterior</button>
+                <button>Siguiente</button>
             </section>
-            <section>
+            <hr>
+
+            <section class="librosAclamados">
                 <h2>Los libros más aclamados</h2>
-                <a href="./pages/detalle.html">
-                    <img src="assets/img/100AniosDeSoledad.jpg" alt="Portada de 100 años de soledad" loading="lazy" width="180">
-                </a>
-                <a href="./pages/detalle.html">
-                            <img src="assets/img/elPrincipito.jpg" alt="Portada de el principito" loading="lazy" width="180">
-                </a>
-                <a href="./pages/detalle.html">
-                    <img src="assets/img/laCasaDeLosEspiritus.jpg" alt="Portada de la casa de los espíritus" loading="lazy" width="180">
-                </a>
-                <a href="./pages/detalle.html">
-                    <img src="assets/img/comoAguaParaChocolate.jpg" alt="Portada de como agua para chocolate" loading="lazy" width="180">
-                </a>
+                <div class="galeriaAclamadas">
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/100AniosDeSoledad.jpg" alt="Portada de 100 años de soledad" loading="lazy" width="180">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/elPrincipito.jpg" alt="Portada de el principito" loading="lazy" width="180">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/laCasaDeLosEspiritus.jpg" alt="Portada de la casa de los espíritus" loading="lazy" width="180">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/comoAguaParaChocolate.jpg" alt="Portada de como agua para chocolate" loading="lazy" width="180">
+                        </a>  
+                    </div>
+                </div>
             </section>
 
         </main>
-        
         <footer class="footer">
             <nav>
                 <ul>
