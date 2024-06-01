@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BookFLIX | Catálogo de libros</title>
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
         <link rel="stylesheet" href="../css/estilos.css">
 
     </head>
-    <body>
+    <body class="bodyRegistrarse">
         <header class="header">
             <nav>
                 <ul>
@@ -39,34 +40,34 @@
             </nav>
         </header>
         <main>
-            <section>
+            <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
                 <h1>Iniciar sesión</h1>
                 <p>Ingrese con sus datos</p>
-                <form class="formulario" method="post">
+                <form id="form" action="" method="get">
                     <div>
-                        <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
+                        <input type="email" placeholder="Email" id="email" name="email">
+                        <div id="error-email" class="error-text"></div>
                     </div>
                     <div>
                         <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                        <div id="error-password" class="error-text"></div>
                     </div>
                     <div>
-                        <input type="submit" value="Iniciar Sesion" id="inicio">
+                        <input class="boton" type="submit" value="Iniciar Sesion" id="inicio">
                         <input type="reset" value="Borrar" id="borrar">  
-                    </div> 
+                    </div>
+                    <div>
+                        <a id="ayuda" class="ayuda" href="registrarse.html">Registrarse</a>
+                    </div>
                 </form>
             </section>
 
         </main>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="../js/valida_simple_inicio.js"></script>
         
-        <footer class="footer">
-            <nav>
-                <ul>
-                    <li>Términos y condiciones</li>
-                    <li>Preguntas frecuentes</li>
-                    <li>Ayuda</li>
-                    <li>Administrador de Libros</li>
-                </ul>
-            </nav>
-        </footer>
     </body>
 </html>

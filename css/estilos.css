@@ -136,7 +136,7 @@ header,footer{
 }
 
 .sectionTitulos{
-    height: 60vh;
+    height: 90vh;
     background:linear-gradient(to bottom, #000000a3, #000000a3), url(../assets/img/posibleFondo1.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -162,6 +162,10 @@ header,footer{
             padding:10px 20px;
         }
     }
+}
+
+.seccionBusqueda{
+    height: 30vh;
 }
 
 .librosTendencias{
