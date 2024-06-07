@@ -8,15 +8,13 @@
         <link rel="stylesheet" href="../css/estilos.css">
 
     </head>
-    <body>
+    <body class="bodyRegistrarse">
         <header class="header">
             <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html">
+                <a href="../index.html">
                           <img src="../assets/img/logo.png" alt="Logo de BookFLIX" loading="lazy" width="100">
-                        </a>  
-                    </li>
+                </a> 
+                <ul>
 
                     <li>
                         <a href="../index.html">Tendencias</a>                     
@@ -31,7 +29,7 @@
                     </li>
 
                     <li>
-                        <a href="../pages/inicioSesion.html">Iniciar Sesion</a>                     
+                        <a href="../pages/inicio_sesion.html">Iniciar Sesion</a>                     
                     </li>
                 
                 </ul>
@@ -39,48 +37,50 @@
             </nav>
         </header>
         <main>
-            <section>
+            <section class="seccionRegistrarse">
                 <h1>Registrarse</h1>
                 <p>Ingrese sus datos</p>
-                <form class="formulario" method="post">
+                <form action="" method="get" id="form-registro" class="formulario">
                     <div>
 
-                        <input type="text" name="nombre" id ="nombre" placeholder="Nombre" required> 
+                        <input type="text" name="nombre" id ="nombre" placeholder="Nombre"> 
                     </div>
                     <div>
-                        <input type="text" name="apellido" id ="apellido" placeholder="Apellido" required>
+                        <input type="text" name="apellido" id ="apellido" placeholder="Apellido">
                     </div>
                     <div>
-                        <input type="text" name="usuario" id ="usuario" placeholder="Nombre de usuario" required>
+                        <input type="text" name="usuario" id ="usuario" placeholder="Nombre de usuario">
                     </div>
                     <div>
-                        <input type="email" name="mail" id="mail" placeholder="ejemplo@mail.com" required>
+                        <input type="email" name="mail" id="mail" placeholder="ejemplo@mail.com">
                     </div>
                     <div>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
                     </div>
                     <div>
-                        <input type="date" name="nacimiento" id="nacimiento" required>
+                        <input type="date" name="nacimiento" id="nacimiento">
                     </div>
                     <div>
-                        <select name="pais" id="pais" required>
+                        <select name="pais" id="pais">
                             <option value="0" selected>Argentina</option>
                             <option value="1">Perú</option>
                             <option value="2">México</option>
                             <option value="3">Chile</option>
                         </select>
                     </div>
+                    <div class="terminos">
+                        <input class="check" type="checkbox" id="terminos">
+                        <label class="textoCheck" for="terminos">Acepta términos y condiciones</label>
+                    </div>
+
                     <div>
-                        <label for="termino">Acepta términos y condiciones</label>
-                        <input type="checkbox" name="termino" id="termino" required>
+                        <input class="boton" type="submit" value="Suscribirse" id="suscribirse">
                     </div>
                     <div>
-                        <input type="submit" value="Suscribirse" id="suscribirse">
-                        <input type="reset" value="Limpiar campos" id="reset">  
-                    </div>                   
+                        <a class="ayuda" href="./inicio_sesion.html">Ya tenes un usuario?</a>
+                    </div>              
                  </form>
-                 <p>¿Ya tenés un usuario creado?</p>
-                 <a href="./inicioSesion.html"> Iniciar sesion</a>
+                 
             </section>
 
         </main>
@@ -88,10 +88,11 @@
         <footer class="footer">
             <nav>
                 <ul>
-                    <li>Términos y condiciones</li>
-                    <li>Preguntas frecuentes</li>
-                    <li>Ayuda</li>
-                    <li>Administrador de Libros</li>
+                    <li><a href="">Términos y condiciones</a></li>
+                    <li><a href="">Preguntas frecuentes</a></li>
+                    <li><a href="">Ayuda</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li><a href="">Administrador de Libros</a></li>
                 </ul>
             </nav>
         </footer>

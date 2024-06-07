@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BookFLIX | Catálogo de libros</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
         <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/estilos.css">
 
@@ -11,14 +12,11 @@
     <body>
         <header class="header">
             <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                          <img src="./assets/img/logo.png" alt="Logo de BookFLIX" loading="lazy" width="100">
-                        </a>  
-                    </li>
+                <a href="#">
+                     <img src="./assets/img/logo.png" alt="Logo de BookFLIX" loading="lazy" width="100">
+                </a>  
                     
-
+                <ul>   
                     <li>
                         <a href="#tendencias">Tendencias</a>                     
                     </li>
@@ -32,84 +30,43 @@
                     </li>
 
                     <li>
-                        <a href="./pages/inicioSesion.html">Iniciar Sesion</a>                     
+                        <a href="./pages/inicio_sesion.html">Iniciar Sesion</a>                     
                     </li>
                 
                 </ul>
 
             </nav>
         </header>
-        <main id = "main">
-            <section class="sectionTitulos">
+        <main id = "main" class="main">
+            <section class="sectionPrincipal" data-aos="zoom-in"  data-aos-duration="1000" >
                 <div class="contenedorTitulos">
-                    <!--el h1 es el titulo principal de la pagina, puede solo tener 1 h1 excepto que tambien tengamos un h1 dentro de un article.-->
                     <h1>Libros a tu medida</h1>
-                    <!--el p es una etiqueta que delimita un parrafo-->
                     <h2>Aquí encontraras las mejores recomendaciones</h2>
-                    <a  href="./pages/registrarse.html">Registrate</a>
+                    <a  class="botonRegistrarse" href="./pages/registrarse.html">Registrate</a>
                 </div>
             </section>
 
-            <section class="seccionBusqueda">
-                 <h2>¿Qué estás buscando para leer?</h2>
-                 <form class= formulario action="">
-                    <input type="text" placeholder="Buscar..." id="buscar" name="buscar">
-                    <input type="submit" value="Buscar">
+            <section class="buscadorPrincipal">
+                 <h2 class="tituloSection">¿Qué estás buscando para leer?</h2>
+                 <form class="buscadorLibros">
+                    <input class="inputBuscador" type="text" placeholder="Buscar..." id="buscar" name="buscar">
+                    <input class="botonBuscador" type="submit" value="Buscar">
                  </form>
             </section>
             
             <hr>
-            <section id="tendencias" class="librosTendencias">
-                <h2>Las tendencias de hoy</h2>
-                <div class="galeriaTendencias">
-                    <div>
-                        <a href="./pages/detalle.html">
-                                <img src="assets/img/100AniosDeSoledad.jpg" alt="Portada de 100 años de soledad" loading="lazy" width="180">
-                        </a>  
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                                <img src="assets/img/elPrincipito.jpg" alt="Portada de el principito" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/laCasaDeLosEspiritus.jpg" alt="Portada de la casa de los espíritus" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/comoAguaParaChocolate.jpg" alt="Portada de como agua para chocolate" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/harryPotterYLaPiedraFilosofal.jpg" alt="Portada de Harry Potter y la piedra filosofal" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="./pages/detalle.html">
-                        <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
-                        </a>
-                    </div> 
+            <section id="tendencias" class="librosTendencia">
+                <h2 class="tituloSection">Las tendencias de hoy</h2>
+                <div class="libros" id="tendenciasContainer">
+                
                 </div>
-                <button>Anterior</button>
-                <button>Siguiente</button>
+                <button id="botonAnterior" class="boton anterior">Anterior</button>
+                <button  id="botonSiguiente" class="boton siguiente">Siguiente</button>
             </section>
             <hr>
 
             <section class="librosAclamados">
-                <h2>Los libros más aclamados</h2>
+                <h2 class="tituloSection">Los libros más aclamados</h2>
                 <div class="galeriaAclamadas">
                     <div>
                         <a href="./pages/detalle.html">
@@ -131,6 +88,16 @@
                         <img src="assets/img/comoAguaParaChocolate.jpg" alt="Portada de como agua para chocolate" loading="lazy" width="180">
                         </a>  
                     </div>
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/harryPotterYLaPiedraFilosofal.jpg" alt="Portada de harry potter y la piedra filosofal" loading="lazy" width="180">
+                        </a>  
+                    </div>
+                    <div>
+                        <a href="./pages/detalle.html">
+                        <img src="assets/img/laLadronaDeLibros.jpg" alt="Portada de la ladrona de libros" loading="lazy" width="180">
+                        </a>  
+                    </div>
                 </div>
             </section>
 
@@ -145,6 +112,14 @@
                     <li><a href="">Administrador de Libros</a></li>
                 </ul>
             </nav>
+            <a href="#main">
+                <img src="./assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            </a>
         </footer>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./js/cargar_libros_index.js"></script>
     </body>
 </html>

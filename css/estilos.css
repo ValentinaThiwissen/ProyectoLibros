@@ -27,15 +27,15 @@ h1{
     font-size: 4rem; /*no menor a 16px*/
     text-align: center;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 h2{
     color:rgb(255, 255, 255);
-    font-size: 2.5rem; /*no menor a 16px*/
+    font-size: 2.2rem; /*no menor a 16px*/
     text-align: center;
-    font-weight: 700;
-    margin-bottom: 20px
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 /*media query 992px*/
@@ -56,7 +56,7 @@ header,footer{
 }
 
 .header{
-    height: 15vh;
+    height: 14vh;
     position:sticky;
     top:0; 
     z-index: 10; 
@@ -65,10 +65,14 @@ header,footer{
         display:flex;
         align-items: center;
         justify-content: space-between;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
         a{
             text-decoration: none;
             color: var(--third-color-t);
             font-size:1.2rem;
+        }
         }
         ul{
             display: flex;
@@ -81,18 +85,28 @@ header,footer{
             column-gap: 20px;
             li{
                 a{
-                    font-size: 2 rem;
+                    font-size: 1.2rem;
+                    padding: 10px;
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(254, 254, 254, 0.3);
+                        border-radius: 5px;
+                    }
                 }
             }
         }
     }
-}
 .footer{
     height: 10vh;
-    position:sticky; 
-    z-index: 10; 
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
     nav{
-        height: 100%;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -107,17 +121,315 @@ header,footer{
         ul{
             display: flex;
             padding-right: 20px;
-            height: 10vh ;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             list-style:none;
             column-gap: 20px;
             a{
-               font-size: 2 rem;            
+               font-size: 1.2rem;            
             }
         }
     }
+}
+
+.main{
+    .sectionPrincipal{
+    height: 90vh;
+    background:linear-gradient(to bottom, #000000a3, #000000a3), url(../assets/img/posibleFondo1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .contenedorTitulos{
+        text-align: center;
+        width: 60%;
+        margin:0 auto;
+        border-radius: 5px;
+
+        .botonRegistrarse{
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.5rem;
+            border:2px solid var(--main-color);
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+             &:hover {
+                 background-color:var(--secondary-color);
+                 transform: scale(0.95);
+                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+             }
+        }
+      }
+    }
+    .buscadorPrincipal{
+        background-color:rgba(0, 0, 0, 0.22);
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tituloSection{
+            color:white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+        }
+        
+        .buscadorLibros{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            .inputBuscador{
+                border: 2px solid white;
+                border-radius: 25px;
+                color: #000000;
+                font-size: 1.2rem;
+                height: 50px;
+                margin: 20px 0px;
+                outline: none;
+                padding: 0px 20px;
+                width: 500px;
+            }
+            .botonBuscador{
+                background-color: #96AFB8;
+                display: inline-block;
+                color:#000000;
+                height: 50px;
+                margin: 20px 10px;
+                padding:0 20px;
+                border-radius: 25px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                border: 2px solid white;
+                text-align: center;
+                 /* Agregar efecto de botón presionado */
+                 transition: transform 0.3s, box-shadow 0.3s;
+                 &:hover {
+                     background-color: #96AFB8;
+                     transform: scale(0.95);
+                     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                 }
+            }
+        }
+}
+
+    .librosTendencia{
+        width:80%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top:50px;
+            margin-bottom: 40px;
+        }
+        .libros{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:60px;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+                .pelicula{
+                    width:200px;
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+                
+                    .imgTendencia{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    
+                    }
+                
+                    .tituloPelicula{
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        transform: translateY(-50%) translateX(-50%);
+                        h4 {
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                            opacity: 0;
+                            margin-bottom: 0.5rem;
+                            letter-spacing: 0.1rem;
+                            transition: opacity 0.5s ease-in-out;
+
+                        }
+                    }
+                    &:hover{
+                    box-shadow: 0 0 30px #d2c2c4cd;
+                    transform: scale(0.9);
+                    
+                    }
+                    &:hover .tituloPelicula{
+                        width: 100%;
+                        height: 100%;
+                        backdrop-filter: blur(20px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &:hover h4 {
+                        width: 100%;
+                        padding: 0.5rem;
+                        opacity: 1;
+                    }
+                
+                }
+            }
+        
+        }
+        .boton{
+            border: 1px solid rgb(0, 0, 0);
+            box-sizing: content-box;
+            margin-top:50px;
+            margin-left:20px;
+            background-color:#96AFB8;
+            color: #000000;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom:60px;
+             /* Agregar efecto de botón presionado */
+             transition: transform 0.3s, box-shadow 0.3s;
+             &:hover {
+                 background-color: #96AFB8;
+                 transform: scale(0.95);
+                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+             }
+        }
+    }
+    .librosAclamados{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        
+        .tituloSection{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top:50px;
+            margin-bottom:20px;
+        }
+        .galeriaAclamadas{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: start;
+            column-gap: 30px;
+            margin-bottom: 10vh;
+    
+            div{
+                margin-bottom: 10px;
+                width: 220px;
+                height: 350px;
+                flex-shrink: 0;
+                box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
+               
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+}
+
+.bodyRegistrarse{
+    height: 100vh;
+    background:linear-gradient(to right top, #24242473,#24242473), url(../assets/img/posibleFondo2.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    .seccionRegistrarse{
+            margin-top: 2rem;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size:1.2rem;
+
+            p{
+            text-align: center;
+            font-size: 1.5rem;}
+    }
+    
+    .formulario{
+        width: 100%;
+        padding:40px;
+        text-align: center;
+        input:not(.check,.boton),select{
+            width: 50%;
+            margin-bottom: 10px;
+            height: 30px;
+            padding: 0px 20px;
+            font-size: 1.2rem;
+            border-radius: 20px;
+            border: 2px solid #e8e8e8;
+            background-color: #0b3a45;
+            outline: none;
+            color:rgb(255, 255, 255);
+        }
+        .terminos{
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .boton{
+            height: 30px;
+            width: 40%;
+            box-sizing: content-box;
+            background-color:#0b3a45;
+            border: 2px solid #0b3a45;
+            color: #ffffff;
+            padding: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+           
+        }
+        .ayuda{
+            font-weight:400;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #ffffff;
+            width: 25vh;
+            height: 5vh;
+        }
+            
+        
+    }
+
 }
 
 .detalle{
@@ -131,105 +443,12 @@ header,footer{
     }
 }
 
-.formulario{
-    text-align: center;
-}
 
-.sectionTitulos{
-    height: 90vh;
-    background:linear-gradient(to bottom, #000000a3, #000000a3), url(../assets/img/posibleFondo1.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .contenedorTitulos{
-        text-align: center;
-        width: 60%;
-        margin:0 auto;
-        border-radius: 5px;
 
-        a{
-            margin-top: 20px;
-            display: inline-block;
-            text-decoration: none;
-            color:var(--main-color);
-            font-size: 2rem;
-            border:2px solid var(--main-color);
-            border-radius: 5px;
-            padding:10px 20px;
-        }
-    }
-}
+
 
 .seccionBusqueda{
-    height: 30vh;
-}
-
-.librosTendencias{
-    width: 80%;
-    margin:0 auto;
     text-align: center;
-    h2{
-        margin-top:50px;
-        margin-bottom:20px;
-    }
-    .galeriaTendencias{
-        display:flex;
-        justify-content: space-evenly;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        div{
-            width: 250px;
-            height: 350px;
-            box-shadow: 10px 10px 47px -6px rgba(255,255,255,0.42);
-            border-radius: 5px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 5px;
-            }
-        }
-    }
-    button{
-       margin-bottom:20px;
-    }
-}
-
-.librosAclamados{
-    width: 80%;
-    margin:0 auto;
-    margin-bottom: 20px;
-    text-align: center;
-    h2{
-        margin-top:50px;
-        margin-bottom:20px;
-    }
-    .galeriaAclamadas{
-        overflow-x: scroll;
-        overflow-y: hidden;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: start;
-        column-gap: 30px;
-        div{
-            width: 220px;
-            height: 350px;
-            flex-shrink: 0;
-            box-shadow: 10px 10px 47px -45px rgba(255,255,255,0.29);
-           
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 5px;
-            }
-        }
-    }
 }
 

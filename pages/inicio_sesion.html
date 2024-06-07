@@ -12,12 +12,10 @@
     <body class="bodyRegistrarse">
         <header class="header">
             <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html">
+                <a href="../index.html">
                           <img src="../assets/img/logo.png" alt="Logo de BookFLIX" loading="lazy" width="100">
-                        </a>  
-                    </li>
+                </a> 
+                <ul>
 
                     <li>
                         <a href="../index.html">Tendencias</a>                     
@@ -39,11 +37,11 @@
 
             </nav>
         </header>
-        <main>
+        <main id="main" class="main">
             <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
                 <h1>Iniciar sesión</h1>
                 <p>Ingrese con sus datos</p>
-                <form id="form" action="" method="get">
+                <form class="formulario" id="form" action="" method="get">
                     <div>
                         <input type="email" placeholder="Email" id="email" name="email">
                         <div id="error-email" class="error-text"></div>
@@ -54,7 +52,6 @@
                     </div>
                     <div>
                         <input class="boton" type="submit" value="Iniciar Sesion" id="inicio">
-                        <input type="reset" value="Borrar" id="borrar">  
                     </div>
                     <div>
                         <a id="ayuda" class="ayuda" href="registrarse.html">Registrarse</a>
